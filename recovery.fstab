@@ -1,0 +1,11 @@
+# mount point    fstype    device            [device2]   fstype2
+/boot           emmc    /dev/block/bootdevice/by-name/boot
+/recovery       emmc    /dev/block/bootdevice/by-name/recovery          flags=backup=1
+/system         ext4    /dev/block/bootdevice/by-name/system
+/system_image   emmc    /dev/block/bootdevice/by-name/system
+/cache          ext4    /dev/block/bootdevice/by-name/cache
+/data           ext4    /dev/block/bootdevice/by-name/userdata          length=-16384
+/oem            ext4    /dev/block/bootdevice/by-name/oem               flags=backup=1
+/persist        ext4    /dev/block/bootdevice/by-name/persist           flags=backup=1
+/external_sd    auto    /dev/block/mmcblk0p1    /dev/block/mmcblk0      flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        auto    /dev/block/sdg1         /dev/block/sdg          flags=display="USB OTG";storage;wipeingui;removable
